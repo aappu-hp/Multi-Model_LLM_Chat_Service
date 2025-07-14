@@ -18,10 +18,14 @@ This project is a **Python-based FastAPI service** that integrates multiple open
 
 ```
 .
-├── main.py             # Entry point for the FastAPI application
-├── logs.json           # JSON file to store logs
-├── requirements.txt    # Python dependencies
-└── README.md           # Project documentation
+├── .gitignore          # Specifies intentionally untracked files to ignore
+├── .python-version     # Python version specification (if using pyenv)
+├── README.md           # Project documentation (this file)
+├── logs.json           # Persistent interaction logs (created after first run)
+├── main.py             # FastAPI application entry point
+├── pyproject.toml      # Python project metadata and build configuration
+├── requirements.txt    # Python dependencies list
+├── uv.lock             # UV package manager lock file
 ```
 ---
 
@@ -38,8 +42,8 @@ This project is a **Python-based FastAPI service** that integrates multiple open
 
 ### 1. 🧬 Clone the Repository
 ```bash
-git clone https://github.com/aappu-hp/PromptCue-Assignment.git
-cd PromptCue-Assignment
+git clone https://github.com/aappu-hp/Multi-Model_LLM_Chat_Service.git
+cd Multi-Model_LLM_Chat_Service
 ```
 
 ### 2. 🧪 Create a Virtual Environment
@@ -172,3 +176,11 @@ Logs are stored in `logs.json` as:
 
 ---
 
+## 🛠️ Troubleshooting 🔍
+
+| Issue                  | Solution                                               |
+|------------------------|--------------------------------------------------------|
+| ❌ Model not responding | ✅ Verify `ollama serve` is running                    |
+| 🚫 Import errors        | 🔄 Recreate virtual environment with `uv venv`         |
+| ⚠️ Unsupported model    | 🔍 Check `ollama list` for available models            |
+| 🔌 Connection refused   | 🖥️ Ensure API is running on port `8000`               |
